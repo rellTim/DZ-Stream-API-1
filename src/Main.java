@@ -6,7 +6,11 @@ import java.util.List;
 public class Main {
     static List<Integer> intList = Arrays.asList(1, 2, 5, 16, -1, -2, 0, 32, 3, 5, 8, 23, 4);
     public static void main(String[] args) {
-       System.out.println(positiveNumber(multiplesAndPositiveNumbers(sort(intList)))); // смешно самому))
+        Collections.sort(intList);
+        for (Integer integerList : intList)
+            if (integerList > 0 && integerList % 2 == 0)
+                System.out.println(integerList);
+       //System.out.println(positiveNumber(multiplesAndPositiveNumbers(sort(intList)))); // смешно самому))
     }
     static List<Integer> positiveNumber(List<Integer> q){
         List<Integer> w = new ArrayList<>();
